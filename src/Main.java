@@ -14,17 +14,26 @@ public class Main {
 
         System.out.println("Task 2");
 
-        int year = 2015;
-        int clientOS2 = 1;
-        int clientDeviceYear = 2024;
-        if (clientOS2 == 0 && clientDeviceYear < year) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientOS2 == 1 && clientDeviceYear >= year) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS2 == 0 && clientDeviceYear < year) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (clientOS2 == 0 && clientDeviceYear >= year) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        int clientOS2 = 0;
+        int clientDeviceYear = 2015;
+
+        switch (clientOS2) {
+            case 0:
+                if (clientDeviceYear <= 2015) {
+                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                    break;
+                } else {
+                    System.out.println("Установите версию приложения для iOS по ссылке");
+                    break;
+                }
+            case 1:
+                if (clientDeviceYear <= 2015) {
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                    break;
+                } else {
+                    System.out.println("Установите версию приложения для Android по ссылке");
+                    break;
+                }
         }
 
         System.out.println("Task 3");
@@ -41,16 +50,15 @@ public class Main {
         int deliveryDistance = 10;
         int deliveryDays = 1;
 
-        if (deliveryDistance < 20) {
-            System.out.println(" Потребуеться дней доставка " + deliveryDays);
-        } else if (deliveryDistance < 60) {
-            deliveryDays++;
-            System.out.println(" Потребуется дней " + deliveryDays);
-        } else if (deliveryDistance < 100) {
-            deliveryDays += 2;
-            System.out.println(" Потребуеться дней " + deliveryDays);
+        boolean EstimatedDeliveryTime = (deliveryDistance >= 0) && (deliveryDistance < 20);
+        if (EstimatedDeliveryTime) {
+            System.out.printf("Для доставки потребуется: %s день %n", deliveryDays);
+        } else if (deliveryDistance >= 20 && (deliveryDistance < 60)) {
+            System.out.printf("Для доставки потребуется: %s дня %n", deliveryDays += 1);
+        } else if (deliveryDistance >= 60 && (deliveryDistance < 100)) {
+            System.out.printf("Для доставки потребуется: %s дня %n", deliveryDays += 2);
         } else {
-            System.out.println("Доставки нет");
+            System.out.println("Доставка не осущетсвляется");
         }
 
         System.out.println("Task 5");
