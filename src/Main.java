@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Task 1");
-
         int clientOS = 0;
         if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
@@ -13,7 +12,6 @@ public class Main {
         }
 
         System.out.println("Task 2");
-
         int clientOS2 = 1;
         int clientDeviceYear = 2015;
 
@@ -37,7 +35,6 @@ public class Main {
         }
 
         System.out.println("Task 3");
-
         int year2 = 2021;
         if (year2 >= 1584 && (year2 % 4 == 0 && year2 % 100 != 0 || year2 % 400 == 0)) {
             System.out.println("Высокосный год");
@@ -46,7 +43,6 @@ public class Main {
         }
 
         System.out.println("Task 4");
-
         int deliveryDistance = 95;
         int deliveryDays = 1;
 
@@ -63,7 +59,6 @@ public class Main {
         }
 
         System.out.println("Task 5");
-
         int monthNumber = 12;
         switch (monthNumber) {
             case 12:
