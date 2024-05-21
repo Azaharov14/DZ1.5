@@ -59,7 +59,6 @@ public class Main {
         }
 
         System.out.println("Task 5");
-
         int monthNumber = 12;
         switch (monthNumber) {
             case 12:
