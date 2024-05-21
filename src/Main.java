@@ -47,13 +47,13 @@ public class Main {
         int deliveryDays = 1;
 
         if (deliveryDistance < 20) {
-            System.out.println("Потребуется дней" + deliveryDays);
+            System.out.println("Потребуется дней " + deliveryDays);
         } else if (deliveryDistance <= 60) {
             deliveryDays++;
-            System.out.println("Потребуется дней" + deliveryDays);
+            System.out.println("Потребуется дней " + deliveryDays);
         } else if (deliveryDistance <= 100) {
             deliveryDays += 2;
-            System.out.println("Потребуется дней" + deliveryDays);
+            System.out.println("Потребуется дней " + deliveryDays);
         } else {
             System.out.println("Доставки нет");
         }
