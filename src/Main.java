@@ -14,7 +14,7 @@ public class Main {
 
         System.out.println("Task 2");
 
-        int clientOS2 = 0;
+        int clientOS2 = 1;
         int clientDeviceYear = 2015;
 
         switch (clientOS2) {
@@ -27,7 +27,7 @@ public class Main {
                     break;
                 }
             case 1:
-                if (clientDeviceYear <= 2015) {
+                if (clientDeviceYear < 2015) {
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
                     break;
                 } else {
@@ -76,34 +76,34 @@ public class Main {
                 System.out.println("Это зима");
                 break;
             case 3:
-                System.out.printf("Это весна");
+                System.out.println("Это весна");
                 break;
             case 4:
-                System.out.printf("Это весна");
+                System.out.println("Это весна");
                 break;
             case 5:
-                System.out.printf("Это весна");
+                System.out.println("Это весна");
                 break;
             case 6:
-                System.out.printf("Это лето");
+                System.out.println("Это лето");
                 break;
             case 7:
-                System.out.printf("Это лето");
+                System.out.println("Это лето");
                 break;
             case 8:
-                System.out.printf("Это лето");
+                System.out.println("Это лето");
                 break;
             case 9:
-                System.out.printf("Это осень");
+                System.out.println("Это осень");
                 break;
             case 10:
-                System.out.printf("Это осень");
+                System.out.println("Это осень");
                 break;
             case 11:
-                System.out.printf("Это осень");
+                System.out.println("Это осень");
                 break;
             default:
-                System.out.printf("Нет такого месяца");
+                System.out.println("Нет такого месяца");
         }
     }
 }
