@@ -19,7 +19,7 @@ public class Main {
 
         switch (clientOS2) {
             case 0:
-                if (clientDeviceYear <= 2015) {
+                if (clientDeviceYear < 2015) {
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                     break;
                 } else {
@@ -47,18 +47,19 @@ public class Main {
 
         System.out.println("Task 4");
 
-        int deliveryDistance = 10;
+        int deliveryDistance = 95;
         int deliveryDays = 1;
 
-        boolean EstimatedDeliveryTime = (deliveryDistance >= 0) && (deliveryDistance < 20);
-        if (EstimatedDeliveryTime) {
-            System.out.printf("Для доставки потребуется: %s день %n", deliveryDays);
-        } else if (deliveryDistance >= 20 && (deliveryDistance < 60)) {
-            System.out.printf("Для доставки потребуется: %s дня %n", deliveryDays += 1);
-        } else if (deliveryDistance >= 60 && (deliveryDistance < 100)) {
-            System.out.printf("Для доставки потребуется: %s дня %n", deliveryDays += 2);
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется дней" + deliveryDays);
+        } else if (deliveryDistance <= 60) {
+            deliveryDays++;
+            System.out.println("Потребуется дней" + deliveryDays);
+        } else if (deliveryDistance <= 100) {
+            deliveryDays += 2;
+            System.out.println("Потребуется дней" + deliveryDays);
         } else {
-            System.out.println("Доставка не осущетсвляется");
+            System.out.println("Доставки нет");
         }
 
         System.out.println("Task 5");
